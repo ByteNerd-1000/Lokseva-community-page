@@ -1,0 +1,193 @@
+
+/* General styles */
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding/border are included in width/height */
+    font-family: Arial, sans-serif;
+}
+
+/* Ensure the body and html fill the full viewport */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar styling */
+header {
+    position: fixed; /* Fix the navbar to the top */
+    top: 0; /* Ensure it's stuck to the top */
+    width: 100%; /* Full width of the page */
+    background-color: white; /* Background color for the navbar */
+    color: #333; /* Text color for contrast */
+    padding: 5px 15px; /* Reduced padding for the header */
+    z-index: 1000; /* Make sure the navbar is above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox for the navbar */
+.nav-bar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo styling */
+#nav-logo img {
+    height: 65px; /* Reduced logo height for mobile */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Links styling */
+#nav-pages {
+    flex-grow: 1; /* Allow this div to take available space */
+    text-align: center; /* Center-align text */
+}
+
+#nav-pages ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the list items */
+}
+
+#nav-pages li {
+    margin: 0 10px; /* Reduced space between list items */
+}
+
+#nav-pages a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Dark text color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s; /* Transition effect for hover */
+}
+
+#nav-pages a:hover {
+    color: #1976d2; /* Darker blue on hover */
+}
+
+/* Button styling */
+.nav-buttons {
+    display: flex; /* Flexbox for buttons */
+    justify-content: center; /* Center buttons */
+}
+
+.nav-buttons a {
+    text-decoration: none; /* Remove underline from links */
+    margin-left:5px; /* Reduced space between buttons */
+    margin-right: 10px;
+}
+
+.nav-buttons button {
+    background-color: #1976d2; /* Blue button background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 14px; /* Reduced padding for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+}
+
+.nav-buttons button:hover {
+    background-color: #1565c0; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Hamburger icon styling */
+.hamburger {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    cursor: pointer; /* Pointer cursor */
+}
+
+.line {
+    width: 24px; /* Line width */
+    height: 3px; /* Line height */
+    background-color: #333; /* Line color */
+    margin: 2px 0; /* Space between lines */
+    transition: 0.4s; /* Transition for hamburger animation */
+}
+
+/* Drawer styling */
+.drawer {
+    position: fixed; /* Fix drawer to the left */
+    top: 0; /* Align to the top */
+    left: -250px; /* Hide drawer off-screen */
+    width: 250px; /* Width of the drawer */
+    height: 100%; /* Full height */
+    background-color: white; /* Background color for the drawer */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: left 0.3s ease; /* Transition for sliding effect */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Show drawer when active */
+.drawer.open {
+    left: 0; /* Slide in the drawer */
+}
+
+/* Drawer links styling */
+.drawer ul {
+    list-style: none; /* Remove default list styling */
+    padding: 20px; /* Add padding for the drawer content */
+    margin: 0; /* Remove margin */
+}
+
+.drawer li {
+    margin: 15px 0; /* Space between drawer items */
+}
+
+.drawer a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Dark text color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s; /* Transition effect for hover */
+}
+
+.drawer a:hover {
+    color: #1976d2; /* Darker blue on hover */
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .nav-buttons {
+        display: none; /* Hide buttons on mobile */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+        position: absolute;
+        right: 15px; /* Position on the right */
+        top: 10px; /* Adjust top position */
+        z-index: 1001; /* Ensure it's above other elements */
+    }
+
+    #nav-pages {
+        display: none; /* Hide nav links on mobile */
+    }
+
+    /* Reduce navbar size on mobile screens */
+    .nav-bar {
+        padding: 5px 10px; /* Further reduced padding */
+    }
+
+    #nav-logo img {
+        height: 40px; /* Further reduced logo size */
+    }
+}
+
+/* Ultra-small devices (like very small smartphones) */
+@media (max-width: 480px) {
+    #nav-logo img {
+        height: 35px; /* Further reduce logo size */
+    }
+
+    .hamburger {
+        right: 10px; /* Adjust position */
+        top: 8px; /* Adjust position */
+    }
+}

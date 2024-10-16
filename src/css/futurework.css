@@ -1,0 +1,108 @@
+
+/* Styling for the banner section */
+.banner-div {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url('../assets/website-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Ensure text is readable on the blue background */
+}
+
+.banner-content {
+    text-align: center;
+}
+
+.banner-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: white; /* White text for better contrast */
+}
+
+.banner-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.join-button {
+    background-color: #ffdd57;
+    color: #333;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #ffc107;
+}
+
+/* Achievements section */
+.achievements-section {
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.prev-work {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.prev-work-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prev-work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.work-title {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.work-desc {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .banner-div {
+        height: 300px;
+    }
+
+    .banner-title {
+        font-size: 2.2rem;
+    }
+
+    .banner-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .prev-work {
+        grid-template-columns: 1fr;
+    }
+}
