@@ -39,7 +39,7 @@ const Footer = () => {
                     </div>
                     <div className="footer-bottom">
                         <hr/>
-                            <p>&copy; 2024 Lokseva | All Rights Reserved | Built with <span  className="heart">❤</span> by the Lokseva Inter</p>
+                            <p>&copy; 2024 Lokseva | All Rights Reserved | Built with <span  className="heart">❤</span> by the Lokseva Intern</p>
                     </div>
                 </div>
             </footer>
